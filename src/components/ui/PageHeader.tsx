@@ -12,7 +12,7 @@ export function PageHeader({
   subtitle?: string;
 }) {
   return (
-    <section className="px-5 pb-6 pt-32">
+    <section className="px-4 pb-6 pt-28 sm:px-5 sm:pt-32">
       <div className="mx-auto max-w-5xl">
         <Reveal>
           <Link
@@ -29,11 +29,11 @@ export function PageHeader({
               {kicker}
             </span>
           )}
-          <h1 className="mt-4 font-display text-5xl font-black uppercase leading-[0.92] tracking-tight text-foreground sm:text-6xl">
+          <h1 className="mt-4 break-words font-display text-[clamp(2rem,10vw,3.75rem)] font-black uppercase leading-[0.95] tracking-tight text-foreground">
             {title}
           </h1>
           {subtitle && (
-            <p className="mt-6 max-w-2xl text-lg leading-relaxed text-muted-foreground">
+            <p className="mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
               {subtitle}
             </p>
           )}

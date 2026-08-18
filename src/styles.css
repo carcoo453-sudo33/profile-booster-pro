@@ -298,6 +298,18 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    /* Safety net: decorative blurs/marquees must never create a horizontal scrollbar */
+    overflow-x: hidden;
+  }
+
+  /* Long unbroken words (URLs, emails, tech names) must not blow out narrow screens */
+  h1,
+  h2,
+  h3,
+  p,
+  li,
+  a {
+    overflow-wrap: break-word;
   }
 
   h1,
