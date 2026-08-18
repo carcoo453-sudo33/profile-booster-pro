@@ -24,7 +24,7 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, ease: "easeOut" as any },
+      transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as const },
     },
   };
 
