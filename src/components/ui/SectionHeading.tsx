@@ -1,12 +1,6 @@
 import { Reveal } from "@/components/ui/Reveal";
 
-export function SectionHeading({
-  kicker,
-  title,
-}: {
-  kicker?: string;
-  title: string;
-}) {
+export function SectionHeading({ kicker, title }: { kicker?: string; title: string }) {
   return (
     <Reveal className="mb-14 text-center">
       {kicker && (

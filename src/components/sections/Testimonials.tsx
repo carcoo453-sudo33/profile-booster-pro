@@ -32,9 +32,7 @@ export function Testimonials() {
                   </span>
                   <div>
                     <div className="font-semibold">{item.name}</div>
-                    <div className="text-sm text-muted-foreground">
-                      {item.title}
-                    </div>
+                    <div className="text-sm text-muted-foreground">{item.title}</div>
                   </div>
                 </figcaption>
               </figure>

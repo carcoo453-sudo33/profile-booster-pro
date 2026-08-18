@@ -1,10 +1,4 @@
-import {
-  createContext,
-  useContext,
-  useEffect,
-  useState,
-  type ReactNode,
-} from "react";
+import { createContext, useContext, useEffect, useState, type ReactNode } from "react";
 
 export type Lang = "en" | "ar";
 
@@ -94,9 +88,7 @@ export function I18nProvider({ children }: { children: ReactNode }) {
   const tr = (key: string) => t[key]?.[lang] ?? key;
 
   return (
-    <I18nContext.Provider
-      value={{ lang, dir: lang === "ar" ? "rtl" : "ltr", toggleLang, tr }}
-    >
+    <I18nContext.Provider value={{ lang, dir: lang === "ar" ? "rtl" : "ltr", toggleLang, tr }}>
       {children}
     </I18nContext.Provider>
   );

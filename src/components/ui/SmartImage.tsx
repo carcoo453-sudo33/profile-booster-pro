@@ -39,7 +39,7 @@ export function SmartImage({
   const resolved = resolveImage(src);
   const imgRef = useRef<HTMLImageElement>(null);
   const [status, setStatus] = useState<"loading" | "ready" | "error">(
-    resolved ? "loading" : "error"
+    resolved ? "loading" : "error",
   );
 
   // Images restored from cache can finish before React attaches onLoad.
@@ -59,7 +59,7 @@ export function SmartImage({
         className={cn(
           "absolute inset-0 transition-opacity duration-500",
           status === "ready" ? "opacity-0" : "opacity-100",
-          status === "loading" && "skeleton-shimmer"
+          status === "loading" && "skeleton-shimmer",
         )}
         style={status === "error" ? { background: gradient } : undefined}
       />
@@ -82,7 +82,7 @@ export function SmartImage({
           className={cn(
             "size-full object-cover transition-opacity duration-500",
             status === "ready" ? "opacity-100" : "opacity-0",
-            imgClassName
+            imgClassName,
           )}
         />
       )}

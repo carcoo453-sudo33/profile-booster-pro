@@ -6,11 +6,32 @@ export interface SkillGroup {
 export const skillGroups: SkillGroup[] = [
   {
     title: "Frontend",
-    skills: ["React", "Next.js", "Angular", "TypeScript", "Tailwind CSS", "Redux", "Responsive Web Design", "React Native", "RxJS", "Bootstrap"],
+    skills: [
+      "React",
+      "Next.js",
+      "Angular",
+      "TypeScript",
+      "Tailwind CSS",
+      "Redux",
+      "Responsive Web Design",
+      "React Native",
+      "RxJS",
+      "Bootstrap",
+    ],
   },
   {
     title: "Backend",
-    skills: [".NET 8", "ASP.NET Core", "C#", "ASP.NET Web API", "Microservices", "Node.js", "GraphQL", "LINQ", "Entity Framework"],
+    skills: [
+      ".NET 8",
+      "ASP.NET Core",
+      "C#",
+      "ASP.NET Web API",
+      "Microservices",
+      "Node.js",
+      "GraphQL",
+      "LINQ",
+      "Entity Framework",
+    ],
   },
   {
     title: "Databases",

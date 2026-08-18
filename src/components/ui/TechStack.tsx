@@ -4,11 +4,7 @@ interface TechStackProps {
   className?: string;
 }
 
-export function TechStack({
-  techs,
-  variant = "grid",
-  className = "",
-}: TechStackProps) {
+export function TechStack({ techs, variant = "grid", className = "" }: TechStackProps) {
   if (variant === "inline") {
     return (
       <div className={`flex flex-wrap gap-3 ${className}`}>

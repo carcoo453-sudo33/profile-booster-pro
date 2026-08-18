@@ -9,7 +9,6 @@ import { useI18n } from "@/lib/i18n";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { IMAGE_SIZES } from "@/lib/image";
 
-
 function ProjectCard({ project, index = 0 }: { project: Project; index?: number }) {
   return (
     <motion.article
@@ -52,9 +51,7 @@ function ProjectCard({ project, index = 0 }: { project: Project; index?: number 
       </div>
 
       <div className="flex flex-1 flex-col p-6">
-        <p className="text-sm leading-relaxed text-muted-foreground">
-          {project.description}
-        </p>
+        <p className="text-sm leading-relaxed text-muted-foreground">{project.description}</p>
 
         {/* Project Type & Client Info */}
         <div className="my-4 flex flex-wrap gap-2">
@@ -83,9 +80,7 @@ function ProjectCard({ project, index = 0 }: { project: Project; index?: number 
           <div className="my-5 grid grid-cols-3 gap-2 border-y border-border py-4">
             {project.metrics.map((m) => (
               <div key={m.label} className="text-center">
-                <div className="text-lg font-extrabold text-gradient-gold">
-                  {m.value}
-                </div>
+                <div className="text-lg font-extrabold text-gradient-gold">{m.value}</div>
                 <div className="text-[11px] uppercase tracking-wide text-muted-foreground">
                   {m.label}
                 </div>

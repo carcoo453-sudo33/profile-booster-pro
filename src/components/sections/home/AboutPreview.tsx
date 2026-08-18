@@ -20,8 +20,8 @@ export function AboutPreview() {
 
         <Reveal>
           <p className="mx-auto max-w-2xl text-center text-lg leading-relaxed text-muted-foreground">
-            Marketplace systems architect — multi-vendor platforms, real-time
-            bidding engines and high-scale commerce, shipped end to end.
+            Marketplace systems architect — multi-vendor platforms, real-time bidding engines and
+            high-scale commerce, shipped end to end.
           </p>
         </Reveal>
 
@@ -29,12 +29,8 @@ export function AboutPreview() {
           {highlights.map((s, i) => (
             <Reveal key={s.label} delay={i * 0.08}>
               <div className="glass rounded-2xl p-6 text-center transition-transform hover:-translate-y-1">
-                <div className="text-3xl font-extrabold text-gradient-gold">
-                  {s.value}
-                </div>
-                <div className="mt-1 text-sm text-muted-foreground">
-                  {s.label}
-                </div>
+                <div className="text-3xl font-extrabold text-gradient-gold">{s.value}</div>
+                <div className="mt-1 text-sm text-muted-foreground">{s.label}</div>
               </div>
             </Reveal>
           ))}

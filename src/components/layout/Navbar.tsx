@@ -77,9 +77,7 @@ export function Navbar() {
           to="/"
           className="group flex items-center gap-3 rounded-2xl bg-foreground/95 px-4 py-2.5 transition-transform hover:scale-[1.03]"
         >
-          <span className="font-display text-xl font-black leading-none text-background">
-            MS
-          </span>
+          <span className="font-display text-xl font-black leading-none text-background">MS</span>
           <span className="text-[10px] font-bold uppercase leading-3 tracking-[0.2em] text-background/80">
             Market
             <br />

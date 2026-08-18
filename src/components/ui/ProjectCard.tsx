@@ -5,7 +5,6 @@ import type { Project } from "@/data/projects";
 import { SmartImage } from "@/components/ui/SmartImage";
 import { IMAGE_SIZES } from "@/lib/image";
 
-
 export type ProjectView = "grid" | "list";
 
 interface ProjectCardProps {
@@ -31,9 +30,7 @@ export function ProjectCard({ project, index, view = "grid" }: ProjectCardProps)
       <div className="flex flex-1 flex-col gap-4 p-5 sm:p-6">
         <header className="min-w-0">
           <div className="flex items-start justify-between gap-3">
-            <h3 className="min-w-0 text-lg font-bold leading-snug sm:text-xl">
-              {project.title}
-            </h3>
+            <h3 className="min-w-0 text-lg font-bold leading-snug sm:text-xl">{project.title}</h3>
             {project.status && (
               <span className="shrink-0 rounded-full border border-accent/25 bg-accent/10 px-2.5 py-0.5 text-[11px] font-semibold text-accent">
                 {project.status}
@@ -201,7 +198,6 @@ export function ProjectCardImage({
     </div>
   );
 }
-
 
 interface TechStackPreviewProps {
   techs: string[];
