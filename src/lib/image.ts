@@ -12,6 +12,9 @@
 
 /** Bases that have -640/-1280 WebP variants on disk. */
 const RESPONSIVE_BASES = new Set([
+  "/api/Marketing-Mvc",
+  "/api/e-commerce-api",
+  "/api/market-api",
   "/projects/angular/luxelle-landing",
   "/projects/angular/zyro-electric",
   "/projects/microservices/Inventory",

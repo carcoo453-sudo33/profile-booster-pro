@@ -24,12 +24,15 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
     visible: {
       opacity: 1,
       x: 0,
-      transition: { duration: 0.5, ease: "easeOut" as any },
+      transition: { duration: 0.5, ease: [0.16, 1, 0.3, 1] as const },
     },
   };
 
   return (
-    <section id="experience" className="scroll-mt-24 bg-gradient-to-b from-background via-secondary/10 to-background py-28">
+    <section
+      id="experience"
+      className="scroll-mt-24 bg-gradient-to-b from-background via-secondary/10 to-background py-28"
+    >
       <div className="mx-auto max-w-5xl px-5">
         {showHeading && <SectionHeading title={tr("experience.title")} />}
 
@@ -45,11 +48,7 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
           <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold via-gold/50 to-transparent md:left-1/2 md:-translate-x-1/2" />
 
           {experience.map((item, index) => (
-            <motion.div
-              key={item.company}
-              className="relative"
-              variants={itemVariants}
-            >
+            <motion.div key={item.company} className="relative" variants={itemVariants}>
               {/* Timeline dot */}
               <div className="absolute left-0 top-4 z-10 md:left-1/2 md:-translate-x-1/2">
                 <div className="flex size-16 items-center justify-center rounded-full border-2 border-background bg-gradient-to-br from-gold to-gold/80 shadow-lg shadow-gold/20">
@@ -58,7 +57,9 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
               </div>
 
               {/* Content card */}
-              <div className={`ml-28 md:w-1/2 ${index % 2 === 1 ? "md:ml-auto md:mr-0 md:pr-12" : "md:ml-0 md:pl-12"}`}>
+              <div
+                className={`ml-28 md:w-1/2 ${index % 2 === 1 ? "md:ml-auto md:mr-0 md:pr-12" : "md:ml-0 md:pl-12"}`}
+              >
                 <Reveal delay={index * 0.1}>
                   <div className="group glass relative overflow-hidden rounded-2xl bg-gradient-to-br from-card/50 via-card to-card/30 p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-gold/10 md:p-8">
                     {/* Accent corner */}
@@ -149,9 +150,7 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
               key={stat.labelKey}
               className="glass rounded-xl bg-gradient-to-br from-card/40 to-card/20 px-4 py-6 text-center md:px-6 md:py-8 border border-gold/10"
             >
-              <p className="text-2xl font-bold text-gold md:text-3xl">
-                {stat.value}
-              </p>
+              <p className="text-2xl font-bold text-gold md:text-3xl">{stat.value}</p>
               <p className="mt-1 text-xs uppercase tracking-wider text-muted-foreground md:text-sm">
                 {tr(stat.labelKey)}
               </p>

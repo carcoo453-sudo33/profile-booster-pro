@@ -17,8 +17,7 @@ export function ContactCta() {
               that scales
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-muted-foreground">
-              Tell me about your marketplace and I&apos;ll come back with a
-              concrete plan.
+              Tell me about your marketplace and I&apos;ll come back with a concrete plan.
             </p>
             <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
               <Link

@@ -24,12 +24,8 @@ export function ExperiencePreview() {
                 {current.period}
               </span>
             </div>
-            <h3 className="mt-4 text-2xl font-bold leading-tight">
-              {current.role}
-            </h3>
-            <p className="mt-2 text-sm font-semibold text-gold">
-              {current.company}
-            </p>
+            <h3 className="mt-4 text-2xl font-bold leading-tight">{current.role}</h3>
+            <p className="mt-2 text-sm font-semibold text-gold">{current.company}</p>
             <ul className="mt-6 space-y-3">
               {current.points.slice(0, 2).map((point) => (
                 <li

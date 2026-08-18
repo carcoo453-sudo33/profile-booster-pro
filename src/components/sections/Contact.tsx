@@ -38,52 +38,29 @@ export function Contact({ showHeading = true }: { showHeading?: boolean } = {}) 
       <div className="mx-auto max-w-2xl px-5">
         {showHeading && <SectionHeading title={tr("contact.title")} />}
         <Reveal>
-          <p className="mb-10 text-center text-muted-foreground">
-            {tr("contact.subtitle")}
-          </p>
+          <p className="mb-10 text-center text-muted-foreground">{tr("contact.subtitle")}</p>
         </Reveal>
 
         <Reveal>
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className="glass space-y-5 rounded-2xl p-7"
-          >
+          <form onSubmit={handleSubmit(onSubmit)} className="glass space-y-5 rounded-2xl p-7">
             <div>
-              <label className="mb-2 block text-sm font-medium">
-                {tr("contact.name")}
-              </label>
-              <input
-                {...register("name")}
-                className={fieldClass}
-                placeholder="Jane Doe"
-              />
+              <label className="mb-2 block text-sm font-medium">{tr("contact.name")}</label>
+              <input {...register("name")} className={fieldClass} placeholder="Jane Doe" />
               {errors.name && (
-                <p className="mt-1.5 text-sm text-destructive">
-                  {errors.name.message}
-                </p>
+                <p className="mt-1.5 text-sm text-destructive">{errors.name.message}</p>
               )}
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-medium">
-                {tr("contact.email")}
-              </label>
-              <input
-                {...register("email")}
-                className={fieldClass}
-                placeholder="jane@company.com"
-              />
+              <label className="mb-2 block text-sm font-medium">{tr("contact.email")}</label>
+              <input {...register("email")} className={fieldClass} placeholder="jane@company.com" />
               {errors.email && (
-                <p className="mt-1.5 text-sm text-destructive">
-                  {errors.email.message}
-                </p>
+                <p className="mt-1.5 text-sm text-destructive">{errors.email.message}</p>
               )}
             </div>
 
             <div>
-              <label className="mb-2 block text-sm font-medium">
-                {tr("contact.message")}
-              </label>
+              <label className="mb-2 block text-sm font-medium">{tr("contact.message")}</label>
               <textarea
                 {...register("message")}
                 rows={5}
@@ -91,9 +68,7 @@ export function Contact({ showHeading = true }: { showHeading?: boolean } = {}) 
                 placeholder="Tell me about your marketplace..."
               />
               {errors.message && (
-                <p className="mt-1.5 text-sm text-destructive">
-                  {errors.message.message}
-                </p>
+                <p className="mt-1.5 text-sm text-destructive">{errors.message.message}</p>
               )}
             </div>
 

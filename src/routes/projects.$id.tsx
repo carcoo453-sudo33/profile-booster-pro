@@ -37,10 +37,7 @@ export function ProjectDetail() {
         <Navbar />
         <div className="flex-1 flex flex-col items-center justify-center py-32">
           <h1 className="text-3xl font-bold mb-4">Project not found</h1>
-          <Link
-            to="/projects"
-            className="text-gold hover:underline flex items-center gap-2"
-          >
+          <Link to="/projects" className="text-gold hover:underline flex items-center gap-2">
             <ArrowLeft className="size-4" />
             Back to Projects
           </Link>
@@ -98,39 +95,29 @@ export function ProjectDetail() {
               <div className="mb-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
                 {project.client && (
                   <div className="glass rounded-xl p-4 border border-border">
-                    <div className="text-xs font-semibold text-muted-foreground mb-1">
-                      CLIENT
-                    </div>
+                    <div className="text-xs font-semibold text-muted-foreground mb-1">CLIENT</div>
                     <div className="text-lg font-semibold">{project.client}</div>
                   </div>
                 )}
                 {project.database && (
                   <div className="glass rounded-xl p-4 border border-border">
-                    <div className="text-xs font-semibold text-muted-foreground mb-1">
-                      DATABASE
-                    </div>
+                    <div className="text-xs font-semibold text-muted-foreground mb-1">DATABASE</div>
                     <div className="text-lg font-semibold">{project.database}</div>
                   </div>
                 )}
                 <div className="glass rounded-xl p-4 border border-border">
                   <div className="flex items-center gap-2 mb-1">
                     <Code2 className="size-3.5 text-gold" />
-                    <div className="text-xs font-semibold text-muted-foreground">
-                      TECH STACK
-                    </div>
+                    <div className="text-xs font-semibold text-muted-foreground">TECH STACK</div>
                   </div>
                   <div className="text-lg font-semibold">{project.tech.length} Tools</div>
                 </div>
                 <div className="glass rounded-xl p-4 border border-border">
                   <div className="flex items-center gap-2 mb-1">
                     <ExternalLink className="size-3.5 text-gold" />
-                    <div className="text-xs font-semibold text-muted-foreground">
-                      STATUS
-                    </div>
+                    <div className="text-xs font-semibold text-muted-foreground">STATUS</div>
                   </div>
-                  <div className="text-lg font-semibold">
-                    {hasLiveSite ? "Live" : "Archived"}
-                  </div>
+                  <div className="text-lg font-semibold">{hasLiveSite ? "Live" : "Archived"}</div>
                 </div>
               </div>
 

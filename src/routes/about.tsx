@@ -64,23 +64,15 @@ function AboutPage() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
       <main>
-        <PageHeader
-          kicker={tr("about.kicker")}
-          title="About Me"
-          subtitle={tr("about.body")}
-        />
+        <PageHeader kicker={tr("about.kicker")} title="About Me" subtitle={tr("about.body")} />
 
         <section className="px-5 pb-8">
           <div className="mx-auto grid max-w-5xl grid-cols-2 gap-4 sm:grid-cols-4">
             {stats.map((s, i) => (
               <Reveal key={s.label} delay={i * 0.07}>
                 <div className="glass rounded-2xl p-6 text-center transition-transform hover:-translate-y-1">
-                  <div className="text-3xl font-extrabold text-gradient-gold">
-                    {s.value}
-                  </div>
-                  <div className="mt-1 text-sm text-muted-foreground">
-                    {s.label}
-                  </div>
+                  <div className="text-3xl font-extrabold text-gradient-gold">{s.value}</div>
+                  <div className="mt-1 text-sm text-muted-foreground">{s.label}</div>
                 </div>
               </Reveal>
             ))}
@@ -102,9 +94,7 @@ function AboutPage() {
                       <span className="size-2 rounded-full bg-gold" />
                       {p.title}
                     </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                      {p.body}
-                    </p>
+                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{p.body}</p>
                   </div>
                 </Reveal>
               ))}

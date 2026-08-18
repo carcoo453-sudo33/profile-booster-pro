@@ -6,15 +6,7 @@ import { Reveal } from "@/components/ui/Reveal";
 import { ProjectCard, type ProjectView } from "@/components/ui/ProjectCard";
 import { EmptyState } from "@/components/ui/EmptyState";
 import { ProjectGridSkeleton, PageSkeleton } from "@/components/ui/Skeletons";
-import {
-  Search,
-  ChevronLeft,
-  ChevronRight,
-  LayoutGrid,
-  Rows3,
-  X,
-  ArrowUpDown,
-} from "lucide-react";
+import { Search, ChevronLeft, ChevronRight, LayoutGrid, Rows3, X, ArrowUpDown } from "lucide-react";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import {
@@ -89,7 +81,7 @@ export function ProjectsPage() {
           p.description.toLowerCase().includes(query) ||
           p.category.toLowerCase().includes(query) ||
           (p.client?.toLowerCase().includes(query) ?? false) ||
-          p.tech.some((t) => t.toLowerCase().includes(query))
+          p.tech.some((t) => t.toLowerCase().includes(query)),
       );
     }
 
@@ -267,18 +259,16 @@ export function ProjectsPage() {
                 >
                   <AnimatePresence mode="popLayout">
                     {paginatedProjects.map((project, index) => (
-                      <ProjectCard
-                        key={project.id}
-                        project={project}
-                        index={index}
-                        view={view}
-                      />
+                      <ProjectCard key={project.id} project={project} index={index} view={view} />
                     ))}
                   </AnimatePresence>
                 </motion.div>
 
                 {totalPages > 1 && (
-                  <nav aria-label="Pagination" className="flex flex-wrap items-center justify-center gap-3">
+                  <nav
+                    aria-label="Pagination"
+                    className="flex flex-wrap items-center justify-center gap-3"
+                  >
                     <button
                       onClick={() => setCurrentPage(Math.max(1, page - 1))}
                       disabled={page === 1}
@@ -346,9 +336,7 @@ function ViewButton({
       aria-label={label}
       title={label}
       className={`inline-flex size-9 items-center justify-center rounded-lg transition-all ${
-        active
-          ? "bg-gold text-gold-foreground"
-          : "text-muted-foreground hover:text-gold"
+        active ? "bg-gold text-gold-foreground" : "text-muted-foreground hover:text-gold"
       }`}
     >
       {children}

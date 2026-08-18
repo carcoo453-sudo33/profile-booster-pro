@@ -112,17 +112,15 @@ export function Hero() {
       {/* Marquee ticker */}
       <div className="relative mt-14 overflow-hidden border-y border-border py-4">
         <div className="flex w-max animate-marquee items-center gap-10">
-          {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map(
-            (item, i) => (
-              <span
-                key={i}
-                className="flex items-center gap-10 text-sm font-bold uppercase tracking-[0.3em] text-foreground/80"
-              >
-                {item}
-                <span className="size-2 rounded-full bg-gold" />
-              </span>
-            ),
-          )}
+          {[...marqueeItems, ...marqueeItems, ...marqueeItems, ...marqueeItems].map((item, i) => (
+            <span
+              key={i}
+              className="flex items-center gap-10 text-sm font-bold uppercase tracking-[0.3em] text-foreground/80"
+            >
+              {item}
+              <span className="size-2 rounded-full bg-gold" />
+            </span>
+          ))}
         </div>
       </div>
     </section>
