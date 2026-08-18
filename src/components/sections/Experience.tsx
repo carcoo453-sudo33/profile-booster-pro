@@ -31,9 +31,9 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
   return (
     <section
       id="experience"
-      className="scroll-mt-24 bg-gradient-to-b from-background via-secondary/10 to-background py-28"
+      className="scroll-mt-24 overflow-hidden bg-gradient-to-b from-background via-secondary/10 to-background py-20 md:py-28"
     >
-      <div className="mx-auto max-w-5xl px-5">
+      <div className="mx-auto max-w-5xl px-4 sm:px-5">
         {showHeading && <SectionHeading title={tr("experience.title")} />}
 
         {/* Timeline Container */}
