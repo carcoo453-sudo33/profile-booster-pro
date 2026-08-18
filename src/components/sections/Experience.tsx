@@ -45,20 +45,20 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
           viewport={{ once: true, margin: "-100px" }}
         >
           {/* Timeline line */}
-          <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-gradient-to-b from-gold via-gold/50 to-transparent md:left-1/2 md:-translate-x-1/2" />
+          <div className="absolute bottom-0 left-5 top-0 w-0.5 bg-gradient-to-b from-gold via-gold/50 to-transparent sm:left-8 md:left-1/2 md:-translate-x-1/2" />
 
           {experience.map((item, index) => (
             <motion.div key={item.company} className="relative" variants={itemVariants}>
               {/* Timeline dot */}
               <div className="absolute left-0 top-4 z-10 md:left-1/2 md:-translate-x-1/2">
-                <div className="flex size-16 items-center justify-center rounded-full border-2 border-background bg-gradient-to-br from-gold to-gold/80 shadow-lg shadow-gold/20">
-                  <Briefcase className="size-7 text-gold-foreground" />
+                <div className="flex size-11 items-center justify-center rounded-full border-2 border-background bg-gradient-to-br from-gold to-gold/80 shadow-lg shadow-gold/20 sm:size-16">
+                  <Briefcase className="size-5 text-gold-foreground sm:size-7" />
                 </div>
               </div>
 
               {/* Content card */}
               <div
-                className={`ml-28 md:w-1/2 ${index % 2 === 1 ? "md:ml-auto md:mr-0 md:pr-12" : "md:ml-0 md:pl-12"}`}
+                className={`ml-14 sm:ml-24 md:w-1/2 ${index % 2 === 1 ? "md:ml-auto md:mr-0 md:pr-12" : "md:ml-0 md:pl-12"}`}
               >
                 <Reveal delay={index * 0.1}>
                   <div className="group glass relative overflow-hidden rounded-2xl bg-gradient-to-br from-card/50 via-card to-card/30 p-6 transition-all duration-300 hover:-translate-y-2 hover:shadow-lg hover:shadow-gold/10 md:p-8">
