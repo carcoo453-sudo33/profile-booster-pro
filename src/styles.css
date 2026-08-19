@@ -233,7 +233,11 @@
   gap: 0.5rem;
   border-radius: var(--radius-xl);
   padding: 0.875rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.2;
   font-weight: 600;
+
   border: 1px solid transparent;
   transition:
     color 0.25s ease,
