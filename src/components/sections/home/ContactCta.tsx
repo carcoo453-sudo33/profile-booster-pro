@@ -9,7 +9,7 @@ export function ContactCta() {
         <Reveal>
           <div className="rounded-2xl bg-card border border-border shadow-glow px-8 py-14 text-center md:px-14">
             <span className="inline-block eyebrow-wide text-primary">Available for new work</span>
-            <h2 className="mt-5 type-h1 text-card-foreground">
+            <h2 className="mt-5 type-h2-lg text-card-foreground">
               Let&apos;s build something
               <br />
               that scales
