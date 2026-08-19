@@ -42,6 +42,7 @@
   --color-social-linkedin: var(--social-linkedin);
   --color-social-foreground: var(--social-foreground);
 
+  --color-brand: var(--brand);
   --color-accent-muted: var(--accent-muted);
   --color-success: var(--success);
   --color-overlay: var(--overlay);
@@ -233,7 +234,11 @@
   gap: 0.5rem;
   border-radius: var(--radius-xl);
   padding: 0.875rem 1.75rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  line-height: 1.2;
   font-weight: 600;
+
   border: 1px solid transparent;
   transition:
     color 0.25s ease,
@@ -352,6 +357,18 @@
   text-wrap: balance;
 }
 
+/* Oversized section heading (full-bleed CTA bands). Sits between h1 and h2
+ * so a page never shows two headings at the same size. */
+@utility type-h2-lg {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 700;
+  line-height: 1.04;
+  letter-spacing: -0.015em;
+  text-transform: uppercase;
+  text-wrap: balance;
+}
+
 @utility type-h3 {
   font-family: var(--font-display);
   font-size: clamp(1.25rem, 2.2vw, 1.625rem);
@@ -411,6 +428,47 @@
   letter-spacing: 0;
   text-transform: none;
 }
+
+/* Secondary body step — UI copy, list rows, dialog text. Replaces every
+ * ad-hoc `text-sm` in app components. */
+@utility type-body-sm {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Dense meta line: dates, org · location, inline facts. Replaces `text-xs
+ * font-semibold`. Case and color stay with the caller. */
+@utility type-meta {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+}
+
+/* Form/control text (inputs, selects, search). One shape for all fields. */
+@utility type-control {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Brand wordmark lockup (the "MS" badge + stacked name). Size is the only
+ * thing a caller may override, via `--wordmark-size`. */
+@utility type-wordmark {
+  font-family: var(--font-display);
+  font-size: var(--wordmark-size, 0.875rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  font-feature-settings: "kern" 1;
+}
+
+
 
 /* Heading entrance: rises and settles its tracking. Pair with `--type-delay`
  * for staggered lines. Honors reduced motion via the block at the bottom. */
@@ -497,6 +555,8 @@
   --input: rgba(255, 255, 255, 0.2);
   --ring: #FFD000;
 
+  /* Fixed brand coral — identical in both themes (logo lockup only). */
+  --brand: #FF4B35;
   --accent-muted: rgba(255, 208, 0, 0.2);
   --success: #22c55e;
   --overlay: rgba(0, 0, 0, 0.5);
@@ -545,6 +605,7 @@
   --input: rgba(0, 0, 0, 0.12);
   --ring: #FF4B35;
 
+  --brand: #FF4B35;
   --accent-muted: rgba(255, 75, 53, 0.12);
   --success: #16a34a;
 

@@ -122,7 +122,7 @@ export function Footer() {
 
             <div className="flex flex-col items-center justify-between gap-8 md:flex-row md:gap-6 relative z-10">
               {/* Headline */}
-              <h2 className="type-h1 text-card-foreground text-center md:text-start">
+              <h2 className="type-h2-lg text-card-foreground text-center md:text-start">
                 {tr("footer.headline1")}
                 <br />
                 {tr("footer.headline2")}
@@ -152,7 +152,7 @@ export function Footer() {
 
               {/* MS Square Badge */}
               <div className="grid place-items-center rounded-[8px] bg-foreground px-2.5 py-1 shadow-sm transition-transform duration-300 group-hover:scale-105">
-                <span className="keep-latin font-display text-xl sm:text-2xl font-bold leading-none text-background tracking-tighter">
+                <span className="keep-latin type-wordmark [--wordmark-size:1.25rem] sm:[--wordmark-size:1.5rem] text-background">
                   MS
                 </span>
               </div>

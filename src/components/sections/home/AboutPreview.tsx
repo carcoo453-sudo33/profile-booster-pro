@@ -22,7 +22,7 @@ export function AboutPreview() {
                   </div>
                 </div>
                 <div className="grid place-items-center rounded-[6px] bg-foreground px-2.5 py-0.5 shadow-sm">
-                  <span className="font-display text-sm font-bold text-background">
+                  <span className="type-wordmark text-background">
                     MS
                   </span>
                 </div>

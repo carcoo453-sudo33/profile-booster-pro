@@ -64,7 +64,7 @@ export function ExperiencePreview() {
           viewport={{ once: true, amount: 0.4 }}
           transition={{ duration: 0.5, ease: EASE }}
         >
-          <h2 className="type-h1 text-center">
+          <h2 className="type-h2-lg text-center">
             {tr("events.title")}
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-center type-lead text-muted-foreground">
@@ -159,7 +159,7 @@ export function ExperiencePreview() {
                     <div className="flex items-center gap-5 sm:gap-7">
                       <span
                         dir="ltr"
-                        className="min-w-10 font-display text-sm font-bold opacity-80"
+                        className="min-w-10 type-wordmark [--wordmark-size:0.875rem] opacity-80"
                       >
                         {item.year}
                       </span>
@@ -179,7 +179,7 @@ export function ExperiencePreview() {
                           {item.title[lang]}
                         </h3>
                         <p
-                          className={`mt-1 text-xs font-semibold ${
+                          className={`mt-1 type-meta ${
                             featured ? "opacity-80" : "text-muted-foreground"
                           }`}
                         >
@@ -190,7 +190,7 @@ export function ExperiencePreview() {
 
                     <div className="flex items-center gap-3 sm:max-w-[20rem] sm:justify-end">
                       <p
-                        className={`text-xs font-bold sm:text-end ${
+                        className={`type-meta sm:text-end ${
                           featured ? "opacity-90" : "text-muted-foreground"
                         }`}
                       >
@@ -223,7 +223,7 @@ export function ExperiencePreview() {
                             featured ? "border-background/20" : "border-border"
                           }`}
                         >
-                          <div className="flex flex-wrap items-center gap-4 text-xs font-semibold">
+                          <div className="flex flex-wrap items-center gap-4 type-meta">
                             <span className="inline-flex items-center gap-1.5 opacity-80">
                               <Calendar className="size-3.5" />
                               {item.period[lang]}
@@ -269,7 +269,7 @@ export function ExperiencePreview() {
                               <motion.li
                                 key={point}
                                 variants={rowVariants}
-                                className={`flex gap-2.5 text-sm leading-relaxed ${
+                                className={`flex gap-2.5 type-body-sm ${
                                   featured ? "opacity-90" : "text-muted-foreground"
                                 }`}
                               >
