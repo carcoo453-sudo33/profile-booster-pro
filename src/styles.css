@@ -412,6 +412,47 @@
   text-transform: none;
 }
 
+/* Secondary body step — UI copy, list rows, dialog text. Replaces every
+ * ad-hoc `text-sm` in app components. */
+@utility type-body-sm {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+/* Dense meta line: dates, org · location, inline facts. Replaces `text-xs
+ * font-semibold`. Case and color stay with the caller. */
+@utility type-meta {
+  font-family: var(--font-sans);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.005em;
+}
+
+/* Form/control text (inputs, selects, search). One shape for all fields. */
+@utility type-control {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+/* Brand wordmark lockup (the "MS" badge + stacked name). Size is the only
+ * thing a caller may override, via `--wordmark-size`. */
+@utility type-wordmark {
+  font-family: var(--font-display);
+  font-size: var(--wordmark-size, 0.875rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  text-transform: uppercase;
+  font-feature-settings: "kern" 1;
+}
+
+
+
 /* Heading entrance: rises and settles its tracking. Pair with `--type-delay`
  * for staggered lines. Honors reduced motion via the block at the bottom. */
 @utility type-in {
