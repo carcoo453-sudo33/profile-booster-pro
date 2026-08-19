@@ -79,16 +79,16 @@ export function Navbar() {
         >
           {/* Prefix dots */}
           <div className="flex items-end gap-[2px] opacity-90">
-            <span className="size-1 rounded-full bg-[#FF4B35] mb-[1px]" />
+            <span className="size-1 rounded-full bg-brand mb-[1px]" />
             <div className="flex flex-col gap-[2px]">
-              <span className="size-1 rounded-full bg-[#FF4B35]" />
-              <span className="size-1 rounded-full bg-[#FF4B35]" />
+              <span className="size-1 rounded-full bg-brand" />
+              <span className="size-1 rounded-full bg-brand" />
             </div>
           </div>
 
           {/* MS Red Square */}
-          <div className="grid place-items-center rounded-[4px] bg-[#FF4B35] px-1.5 py-0.5 shadow-sm">
-            <span className="keep-latin font-display text-xs font-bold leading-none text-white tracking-tighter">
+          <div className="grid place-items-center rounded-[4px] bg-brand px-1.5 py-0.5 shadow-sm">
+            <span className="keep-latin type-wordmark [--wordmark-size:0.75rem] text-white">
               MS
             </span>
           </div>
@@ -129,14 +129,14 @@ export function Navbar() {
             title={tr("common.theme")}
           >
             <Sun
-              className={`absolute size-3.5 text-[#FFD000] transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
+              className={`absolute size-3.5 text-accent transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
                 theme === "dark"
                   ? "rotate-0 scale-100 opacity-100"
                   : "-rotate-90 scale-0 opacity-0"
               }`}
             />
             <Moon
-              className={`absolute size-3.5 text-[#FF4B35] transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
+              className={`absolute size-3.5 text-accent transition-all duration-500 [transition-timing-function:cubic-bezier(0.22,1,0.36,1)] ${
                 theme === "dark"
                   ? "rotate-90 scale-0 opacity-0"
                   : "rotate-0 scale-100 opacity-100"
@@ -152,7 +152,7 @@ export function Navbar() {
             className="flex h-8 items-center gap-1.5 rounded-2xl bg-foreground/10 border border-border px-2.5 type-micro text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
             title={tr("common.language")}
           >
-            <Globe className="size-3.5 text-[#FF4B35]" />
+            <Globe className="size-3.5 text-accent" />
             <span className="keep-latin uppercase">{lang === "en" ? "AR" : "EN"}</span>
           </button>
 

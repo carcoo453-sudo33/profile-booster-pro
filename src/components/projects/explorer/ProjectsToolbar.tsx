@@ -47,7 +47,7 @@ export function ProjectsToolbar({
             placeholder={tr("projects.index.searchPlaceholder")}
             value={searchQuery}
             onChange={(e) => onSearchChange(e.target.value)}
-            className="h-9 w-full rounded-xl border border-border bg-foreground/10 ps-10 pe-9 text-sm text-card-foreground placeholder:text-card-foreground/60 transition-all focus:border-foreground/40 focus:bg-foreground/15 focus:outline-none"
+            className="h-9 w-full rounded-xl border border-border bg-foreground/10 ps-10 pe-9 type-control text-card-foreground placeholder:text-card-foreground/60 transition-all focus:border-foreground/40 focus:bg-foreground/15 focus:outline-none"
           />
           {searchQuery && (
             <button
@@ -69,7 +69,7 @@ export function ProjectsToolbar({
             <SelectTrigger
               id="project-sort"
               aria-label={tr("projects.index.sort")}
-              className="h-9 w-full gap-2 rounded-xl border-border bg-foreground/10 px-3 text-sm font-bold text-card-foreground shadow-none transition-all hover:bg-foreground/15 focus:ring-0 md:w-44"
+              className="h-9 w-full gap-2 rounded-xl border-border bg-foreground/10 px-3 type-control font-bold text-card-foreground shadow-none transition-all hover:bg-foreground/15 focus:ring-0 md:w-44"
             >
               <div className="flex min-w-0 flex-1 items-center gap-2 whitespace-nowrap text-start">
                 <ArrowUpDown className="size-4 shrink-0 text-primary" />
@@ -81,7 +81,7 @@ export function ProjectsToolbar({
                 <SelectItem
                   key={option.value}
                   value={option.value}
-                  className="cursor-pointer rounded-xl text-sm text-card-foreground hover:bg-foreground/10 focus:bg-foreground/10"
+                  className="cursor-pointer rounded-xl type-control text-card-foreground hover:bg-foreground/10 focus:bg-foreground/10"
                 >
                   {tr(option.key)}
                 </SelectItem>
